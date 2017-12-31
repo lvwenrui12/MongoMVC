@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoMVC", "MongoMVC\MongoMVC.csproj", "{B939418E-11CC-4242-A927-57BD5C839F56}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "协议", "协议", "{6C23E787-6605-4E40-82E1-74B93CCD1EAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mitsubishi.FX", "Mitsubishi.FX\Mitsubishi.FX.csproj", "{49144A32-C74B-4EFE-B016-4E88AA5E4338}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{B939418E-11CC-4242-A927-57BD5C839F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B939418E-11CC-4242-A927-57BD5C839F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B939418E-11CC-4242-A927-57BD5C839F56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49144A32-C74B-4EFE-B016-4E88AA5E4338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49144A32-C74B-4EFE-B016-4E88AA5E4338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49144A32-C74B-4EFE-B016-4E88AA5E4338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49144A32-C74B-4EFE-B016-4E88AA5E4338}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{49144A32-C74B-4EFE-B016-4E88AA5E4338} = {6C23E787-6605-4E40-82E1-74B93CCD1EAB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FEED48D3-98A2-4A37-A34B-09D22A134FA3}

@@ -8,7 +8,7 @@ namespace MongoMVC.Models
     public class Tag
     {
 
-        public string name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// 寄存器
@@ -22,7 +22,7 @@ namespace MongoMVC.Models
 
 
 
-        public int   value { get; set; }
+        public int   Value { get; set; }
 
     }
 }

@@ -9,24 +9,24 @@ namespace MongoMVC.Models
     public class PLC
     {
 
-        public string  name { get; set; }
+        public string  Name { get; set; }
     
         /// <summary>
         /// IP地址
         /// </summary>
-        public IPAddress ip { get; set; }
+        public IPAddress Ip { get; set; }
 
         /// <summary>
         /// 端口
         /// </summary>
-        public int iPortNumber { get; set; }
+        public int IPortNumber { get; set; }
 
         /// <summary>
         /// 串口
         /// </summary>
-        public int serialPort { get; set; }
+        public int SerialPort { get; set; }
 
 
-        public List<Tag> tags { get; set; }
+        public List<Tag> Tags { get; set; }
     }
 }

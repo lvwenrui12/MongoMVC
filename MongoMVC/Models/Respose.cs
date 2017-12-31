@@ -10,7 +10,7 @@ namespace MongoMVC.Models
         /// <summary>
         /// 
         /// </summary>
-        public string  ip { get; set; }
+        public string  Ip { get; set; }
 
         /// <summary>
         /// 寄存器
@@ -20,11 +20,11 @@ namespace MongoMVC.Models
         /// <summary>
         /// 地址
         /// </summary>
-        public int  address { get; set; }
+        public int  Address { get; set; }
 
         /// <summary>
         /// 返回的时间
         /// </summary>
-        public string resposeTime { get; set; } = DateTime.Now.ToString();
+        public string ResposeTime { get; set; } = DateTime.Now.ToString();
     }
 }
