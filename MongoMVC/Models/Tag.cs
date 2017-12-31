@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoRepository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,7 +23,12 @@ namespace MongoMVC.Models
 
 
 
-        public int   Value { get; set; }
+        public int Value { get; set; }
+
+        /// <summary>
+        /// 记录tag的接收信息
+        /// </summary>
+        public List<Respose> Resposes { get; set; } = new List<Respose>();
 
     }
 }
