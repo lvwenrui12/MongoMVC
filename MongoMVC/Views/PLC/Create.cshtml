@@ -1,0 +1,179 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加PLC</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="../Style/HPlusStyle/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="../Style/HPlusStyle/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="../Style/HPlusStyle/css/animate.min.css" rel="stylesheet">
+    <link href="../Style/HPlusStyle/css/style.min.css?v=4.0.0" rel="stylesheet">
+    <link href="../Style/CustomStyle/css/common.css" rel="stylesheet">
+    <link href="../Style/FormValidation/css/formValidation.css" rel="stylesheet">
+
+</head>
+<body class="gray-bg">
+    <div class="col-sm-6 col-lg-offset-3 marginTop30 container">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>添加PLC</h5>
+            </div>
+            <div class="ibox-content">
+                <form class="form-horizontal m-t" id="addPLC">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">IP地址：</label>
+                        <div class="col-sm-8">
+                            <input id="Ip" name="Ip" class="form-control" type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">端口号：</label>
+                        <div class="col-sm-8">
+                            <input id="IPortNumber" name="IPortNumber" class="form-control" type="text" aria-required="true" aria-invalid="true" class="error">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">协议：</label>
+
+                        <div class="col-sm-8">
+                            <select class="form-control m-b" id="Protocol" name="Protocol">
+                                <option>FX编程口协议</option>
+                                <option>MC协议1E/option>
+                                <option>MC协议3E/option>
+
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8 col-sm-offset-7">
+                            <button class="btn col-sm-5 btn-primary " type="submit">提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../Style/HPlusStyle/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../Style/HPlusStyle/js/bootstrap.min.js?v=3.3.5"></script>
+
+    <script src="../Style/HPlusStyle/js/content.min.js?v=1.0.0"></script>
+    <script src="../Style/HPlusStyle/js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="../Style/HPlusStyle/js/plugins/validate/messages_zh.min.js"></script>
+    <script src="../Style/HPlusStyle/js/demo/form-validate-demo.min.js"></script>
+    <script src="../Style/FormValidation/js/formValidation.js"></script>
+    <script src="../Style/FormValidation/js/bootstrap.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#addPLC').formValidation({
+                err: {
+                    container: 'tooltip'
+                },
+                //        trigger: 'blur',
+                icon: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    Ip: {
+                        validators: {
+                           
+                            notEmpty: {
+                                message: '必填'
+                            },
+                            regexp: {
+                                enabled: true,
+                                regexp: /^(([1-9]|([1-9]\d)|(1\d\d)|(2([0-4]\d|5[0-5])))\.)((d|([1-9]\d)|(1\d\d)|(2([0-4]\d|5[0-5])))\.){2}([1-9]|([1-9]\d)|(1\d\d)|(2([0-4]\d|5[0-5])))$/i,
+                                message: 'ip地址格式不正确'
+                            }
+                        }
+                    },
+                    IPortNumber: {
+                        validators: {
+                            
+                            notEmpty: {
+                                message: '必填'
+                            },
+                            regexp: {
+                                regexp: /^[0-9]+$/i,
+                                message: '请输入输入数字'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+
+
+         //$(document).ready(function () {
+         //    $('#addPLC').bootstrapValidator({
+         //        //container: 'tooltip',
+         //        message: '输入不正确',
+         //        feedbackIcons: {
+         //            valid: 'glyphicon glyphicon-ok',
+         //            invalid: 'glyphicon glyphicon-remove',
+         //            validating: 'glyphicon glyphicon-refresh'
+         //        },
+         //        fields: {
+         //            Ip: {
+         //                validators: {
+         //                    notEmpty: {
+         //                        message: 'IP不能为空'
+         //                    },
+         //                    regexp: { regexp: /^(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5])$/, message: '请输入ip地址~' },
+         //                    callback: {
+         //                        callback: function (value, validator, $field) {
+         //                            return true;
+         //                        }
+         //                    }
+         //                }
+         //            },
+         //            IPortNumber: {
+         //                trigger: 'change',
+         //                validators: {
+         //                    notEmpty: {
+         //                        message: '端口号不能为空'
+         //                    },
+         //                    regexp: { regexp: /^[0-9]+$/, message: '请填入数字~' },
+
+         //                    callback: {
+         //                        callback: function (value, validator, $field) {
+         //                            return true;
+         //                        }
+         //                    }
+         //                }
+         //            }
+         //        }
+         //    }).ajaxForm({
+         //        url: "/PLC/Create",
+         //        type: "POST",
+         //        data: $("#addPLC").serialize(),
+         //        success: function (result) {
+         //            if (result.valid == false) {
+         //                showMsg(result.message);
+         //                console.log("f");
+         //                //$("#form1").data('bootstrapValidator').updateStatus(result.field, "INVALID", "callback");
+         //                //$("#form1").data('bootstrapValidator').updateMessage(result.field, "callback", result.message);
+         //            }
+         //            else {
+         //                console.log("s");
+         //                var url = result.message;
+         //                window.location = url;
+         //            }
+         //        }
+         //    });
+         //});
+
+      
+    </script>
+</body>
+</html>

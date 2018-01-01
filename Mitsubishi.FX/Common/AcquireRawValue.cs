@@ -1,5 +1,5 @@
 ﻿
-using MeiCloud.IoT.Driver.Mitsubishi.FX.FxProgramProtocol;
+using Mitsubishi.FX.FxProgramProtocol;
 using System;
 using System.Collections.Generic;
 using System.Linq;
